@@ -7,7 +7,7 @@
     console.debug("Submitted");
 
     var track = {
-      title: $('#search-input').val(),
+      title: $('#js-search-input').val(),
     };
 
     console.log(track);

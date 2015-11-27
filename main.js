@@ -47,5 +47,19 @@
     console.log(preview_url);
   }
 
+  function play () {
+    if($('.btn-play').hasClass('disabled')) {
+      $('.js-audio').trigger('play');
+    } else {
+      $('.js-audio').trigger('pause');
+    };
+    $('.btn-play').toggleClass('disabled');
+    $('.btn-play').toggleClass('playing');
+  }
+
+  $('.btn-play').on('click', play);
+
+
+
 
 })();

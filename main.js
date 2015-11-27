@@ -59,7 +59,10 @@
 
   $('.btn-play').on('click', play);
 
+  function timeupdate () {
+    var current = $('.js-audio').prop('currentTime');
+    $('progress').val(current);
+  }
 
-
-
+  $(".js-audio").on('timeupdate', timeupdate);
 })();

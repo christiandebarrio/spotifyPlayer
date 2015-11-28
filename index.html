@@ -1,9 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title></title>
+	<meta charset="UTF-8">
+	<title>SpotiPlayer</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="logo">
@@ -15,7 +18,11 @@
 		    <div class="col-sm-10">
 		      <input type="search" class="form-control" id="js-search-input" placeholder="Find a song">
 		    </div>
-		    <button id="search-button" type="submit" class="btn btn-default">Search</button>
+		  </div>
+		  <div class="form-group">
+		  	<div class="col-sm-10">
+		  		<button id="search-button" type="submit" class="btn btn-default">Search</button>
+		  	</div>
 		  </div>
 		</form>
 	</section>
@@ -29,7 +36,7 @@
 
 		<div class="metadata">
 		  <p class="js-title">Hunger of The Pine</p>
-		  <p class="js-author">alt-J</p>
+		  <a class="js-artist" href="" data-id="3XHO7cRUPCLOr6jwp8vsx5">alt-J</a>
 
 		  <div class="seekbar">
 		    <progress value="0" max="30"></progress>
@@ -42,6 +49,27 @@
 
 		<audio class="js-audio" src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
 	</section>
+
+	<div class="modal fade js-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <!-- Close button -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span>&times;</span>
+        </button>
+
+        <h2>This is the modal's header.</h2>
+      </div>
+
+      <div class="modal-body">
+        <p>This is the modal's body.</p>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 	<script src="main.js"></script>
 

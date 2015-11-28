@@ -15,15 +15,21 @@ body {
 
 .form-horizontal {
   margin: 0 auto 45px;
-  width:60%;
-
+  width: 40%;
 }
 
-#search-input {
-  background-color: #CCC;
+.form-group {
+  margin: 10px auto;
+}
+
+#js-search-input {
+  margin: 0 11%;
+  width:100%;
+  background-color: #EFEFEF;
 }
 
 #search-button {
+  margin: 0 50%;
   background-color: #84BD00;
 }
 
@@ -123,7 +129,7 @@ body {
   width: calc(100% - 100px);
 }
 
-.title, .author {
+.js-title, .js-author {
   overflow: hidden;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
@@ -135,7 +141,7 @@ body {
   font-weight: bold;
 }
 
-.author {
+.js-artist {
   font-weight: normal;
 }
 
@@ -144,12 +150,12 @@ body {
   width: 100%;
 }
 
-.cover {
+.js-cover {
   height: 300px;
   position: relative;
 }
 
-.cover img {
+.js-cover img {
   max-width: 100%;
   max-height: 100%;
   position: absolute;

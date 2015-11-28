@@ -79,12 +79,12 @@
     event.preventDefault();
     var artist_id = $('.js-artist').data('id');
     var artist_url = '/v1/artists/' + artist_id;
-    // var albums_url = '/v1/artists/' + artist + '/albums';
+    
 
-    var request = $.get(base_url + artist_id);
+    var request = $.get(base_url + artist_url);
 
     function onSaveSuccess (response) {
-      getArtistAlbums(response);
+      printArtistInfo(response);
       console.debug('Artist searched', response);
     }
 
@@ -97,21 +97,38 @@
   }
 
   function printArtistInfo (artist) {
+    var name = artist.name;
+    var image_url = artist.images[1].url;
+    var followers = 'Followers: ' + artist.followers.total;
+    var popularity = 'Popularity: ' + artist.popularity;
 
-  }
+    $('.js-photo-artist').attr('src', image_url);
+    $('.js-artist-name').text(name);
+    $('.js-artist-socialdata').html(popularity + '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp' + followers);
 
-  function requestArtistAlbums (artist) {
-    var albums = [];
-    artis.items.map(function (album) {
-      if(albums.indexOf(album.name) === -1){
-        return albums.push(album.name);
-      };
-    }); 
+    console.log('name: ' + name);
+    console.log('image_url: ' + image_url);
+    console.log('followers: ' + followers);
+    console.log('popularity: ' + popularity);
 
-    console.log("Albums :" + albums);
 
     $('.modal').modal('show');
   }
+
+  // function requestArtistAlbums (artist) {
+  //   var artist_id = $('.js-artist').data('id');
+  //   var albums_url = '/v1/artists/' + artist_id + '/albums';
+  //   var albums = [];
+  //   artis.items.map(function (album) {
+  //     if(albums.indexOf(album.name) === -1){
+  //       return albums.push(album.name);
+  //     };
+  //   }); 
+
+  //   console.log("Albums :" + albums);
+
+  //   $('.modal').modal('show');
+  // }
 
 
   $(".js-artist").on('click', requestArtistInfo);

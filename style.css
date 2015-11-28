@@ -163,6 +163,10 @@ body {
   border: 0;
 }
 
+.js-photo-artist {
+  max-width: 100%;
+}
+
 audio {
   display: none;
 }

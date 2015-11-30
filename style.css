@@ -1,5 +1,5 @@
 body {
-  background-color: #4A4D50;
+  background-color: #313335;
 }
 
 #logo {
@@ -8,28 +8,24 @@ body {
 
 #logo h1 {
   margin: auto;
-  font-size: 50px;
+  font-size: 55px;
   text-align: center;
   color: #84BD00;
 }
 
 .form-horizontal {
   margin: 0 auto 45px;
-  width: 40%;
-}
-
-.form-group {
-  margin: 10px auto;
 }
 
 #js-search-input {
-  margin: 0 11%;
-  width:100%;
+  display: inline;
+  width:70%;
   background-color: #EFEFEF;
 }
 
 #search-button {
-  margin: 0 50%;
+  display: inline;
+  width: 20%;
   background-color: #84BD00;
 }
 

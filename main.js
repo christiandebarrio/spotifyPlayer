@@ -2,7 +2,7 @@
   "use strick";
   var base_url = "https://api.spotify.com";
 
-  function resetPlayer () {
+  function resetForNewSearch () {
     $('.js-audio').trigger('stop');
     $('.btn-play').addClass('disabled');
     $('.btn-play').removeClass('playing');   
@@ -23,7 +23,7 @@
 
     function onSaveSuccess (response) {
       console.debug('Tracks list searched', response);
-      resetPlayer();
+      resetForNewSearch();
       showTrack(response);
     }
 

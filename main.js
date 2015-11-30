@@ -77,7 +77,7 @@
 
   function requestArtistInfo (event) {
     event.preventDefault();
-    var artist_id = $('.js-artist').data('id');
+    var artist_id = $('.js-artist').attr('data-id');
     var artist_url = '/v1/artists/' + artist_id;
     
 

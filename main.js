@@ -119,7 +119,7 @@
   //   var artist_id = $('.js-artist').data('id');
   //   var albums_url = '/v1/artists/' + artist_id + '/albums';
   //   var albums = [];
-  //   artis.items.map(function (album) {
+  //   artist.items.map(function (album) {
   //     if(albums.indexOf(album.name) === -1){
   //       return albums.push(album.name);
   //     };
